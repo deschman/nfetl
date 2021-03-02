@@ -9,7 +9,7 @@ from random import randrange, random
 from time import sleep
 import urllib
 from urllib.error import URLError
-from typing import List, Dict
+from typing import List
 
 # %%% 3rd Party
 from bs4 import BeautifulSoup
@@ -17,23 +17,23 @@ import pandas as pd
 from dask.distributed import Client
 
 # %%% User Defined
-from nfetl import _config
+from nfetl._config import _config as config
 from nfetl._datetime import _date
 
 
 # %% Variables
 # %%% System
-__all__ = ["get_url_data", "get_update"]
+__all__ = ['get_url_data', 'get_update']
 
 # %%% Private
 _client: object = Client(processes=False)
 
-_default_start_year: int = int(_config['Scope']['start_year'])
+_default_start_year: int = int(config['Scope']['start_year'])
 _default_urls: pd.DataFrame = pd.DataFrame([
-    _config['Scope']['keys'].split(', '),
-    [_config['URLs'][key] for key in _config['URLs'].keys()],
-    [_config['Columns_extract'][key] for key in
-     _config['Columns_extract'].keys()]])
+    config['Scope']['keys'].split(', '),
+    [config['URLs'][key] for key in config['URLs'].keys()],
+    [config['Columns_extract'][key] for key in
+     config['Columns_extract'].keys()]])
 
 
 # %% Functions

@@ -3,7 +3,7 @@ start_year = 1970
 keys = offense, kickers, defense, rb_defense, te_defense, qb_defense, wr_defense, coaches, schedule
 
 [Data]
-folder = C:\Users\desch\anaconda3\lib\site-packages\nfetl\data
+folder = c:\users\deschman\spyder-env\lib\site-packages\nfetl\_config\data
 test_url_data = %(folder)s\test_url_data.h5
 
 [URLs]
@@ -16,6 +16,7 @@ qb_defense = https://www.pro-football-reference.com/years/{0}/fantasy-points-aga
 wr_defense = https://www.pro-football-reference.com/years/{0}/fantasy-points-against-WR.htm
 coaches = https://www.pro-football-reference.com/years/{0}/coaches.htm
 schedule = https://www.pro-football-reference.com/years/{0}/games.htm
+test = https://www.pro-football-reference.com/years/2019/fantasy.htm
 
 [Columns_extract]
 offense = 'Rk', 'Player', 'Tm', 'FantPos', 'Age', 'G', 'GS', 'P_Cmp', 'P_Att', 'P_Yds', 'P_TD', 'P_Int', 'Ru_Att', 'Ru_Yds', 'Ru_Y/A', 'Ru_TD', 'Re_Tgt', 'Re_Rec', 'Re_Yds', 'Re_Y/R', 'Re_TD', 'Fmb', 'FL', 'TD', '2PM', '2PP', 'FantPt', 'PPR', 'DKPt', 'FDPt', 'VBD', 'PosRank', 'OvRank'
@@ -29,13 +30,12 @@ coaches = 'Coach', 'Tm', 'G_Y', 'W_Y', 'L_Y', 'T_Y', 'G_T', 'W_T', 'L_T', 'T_T',
 schedule = 'Week', 'Day', 'Date', 'Time', 'Winner/tie', '@', 'Loser/tie', '', 'PtsW', 'PtsL', 'YdsW', 'TOW', 'YdsL', 'TOL'
 
 [Columns_transform]
-offense = 
-kickers = 
-defense = 
-rb_defense = 
-te_defense = 
-qb_defense = 
-wr_defense = 
-coaches = 
-schedule = 
-
+offense =
+kickers =
+defense =
+rb_defense =
+te_defense =
+qb_defense =
+wr_defense =
+coaches =
+schedule =

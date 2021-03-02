@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
+"""ETL Functions for NFL statistics database."""
 
 
-from nfetl.processes import extract, transform, load
+# %% Imports
+from nfetl.processes.extract import (get_url_data,
+                                     get_update)
+from nfetl.processes.transform import *
+from nfetl.processes.load import *
 
-__all__ = ["extract", "transform", "load"]
+# %% Variables
+__all__ = ['get_url_data', 'get_update']

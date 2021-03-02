@@ -1,6 +1,6 @@
 # nfetl (https://github.com/deschman/nfetl)
 ## Short Description
-A python package for creating and maintaining an NFL statistics database.
+A python package for creation and maintenance of an NFL statistics database.
 
 ## Long Description
 **nfetl** provides users with a straight-forward API for creating and
