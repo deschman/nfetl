@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
+"""Docstring."""
 
+
+# %% Imports
+# %%% Py3 Standard
 # from datetime import date
 from random import randrange, random
 from time import sleep
@@ -7,16 +11,21 @@ import urllib
 from urllib.error import URLError
 from typing import List, Dict
 
+# %%% 3rd Party
 from bs4 import BeautifulSoup
 import pandas as pd
 from dask.distributed import Client
 
+# %%% User Defined
 from nfetl import _config
 from nfetl._datetime import _date
 
 
+# %% Variables
+# %%% System
 __all__ = ["get_url_data", "get_update"]
 
+# %%% Private
 _client: object = Client(processes=False)
 
 _default_start_year: int = int(_config['Scope']['start_year'])
@@ -27,10 +36,10 @@ _default_urls: pd.DataFrame = pd.DataFrame([
      _config['Columns_extract'].keys()]])
 
 
+# %% Functions
 def get_url_data(url: str) -> pd.DataFrame:
     """
-    Retrieve data table from URL, assuming the HTML page format used by
-    pro-football-reference.com.
+    Retrieve data table from URL.
 
     Parameters
     ----------
@@ -41,7 +50,6 @@ def get_url_data(url: str) -> pd.DataFrame:
     -------
     data : pandas.DataFrame
         Data table from HTML page found at URL.
-
     """
     try:
         html: object = urllib.request.urlopen(url)
@@ -53,7 +61,7 @@ def get_url_data(url: str) -> pd.DataFrame:
         headers = [i.getText() for i in table[0].findAll('th')]
     done: bool = False
     while not done:
-        # TODO: make this append rather than lumping at once
+        # TODO: make this append rather than lumping all at once
         try:
             data = pd.concat(
                 [pd.DataFrame([max([c.getText() for c in row],
@@ -85,8 +93,10 @@ def get_url_data(url: str) -> pd.DataFrame:
 def get_update(start_year: int = _default_start_year,
                urls: List[str] = _default_urls):
     """
-    Retrieve all data tables from URL list provided by user or in config file
-    from dtLastUpdate on ONLY. Multiple calls to getURLData by the dask client.
+    Retrieve all data tables from URL list provided by user or in config file.
+
+    Makes multiple calls to get_url_data from the dask distributed client. Will
+    retrieve data from start_year and after.
 
     Parameters
     ----------
@@ -101,7 +111,6 @@ def get_update(start_year: int = _default_start_year,
     dfs : list
         Contains pandas.DataFrame objects containing data from table found on
         HTML page located at URL.
-
     """
     if start_year > _date.today().nfl_year():
         raise Exception

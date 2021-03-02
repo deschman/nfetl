@@ -1,17 +1,28 @@
 # -*- coding: utf-8 -*-
 """
-nfetl is a package that can be used to create and maintain a database
-containing nfl data by player/team by week/year.
+A package for creation and maintenance of an nfl stats database.
 
 @author: desch
 """
 
 
+# %% Imports
+# %%% Py3 Standard
 from configparser import ConfigParser
 import os
 
+# %%% User Defined
+from nfetl.db import *
+from nfetl.processes import *
 
+
+# %% Variables
+# %%% System
+__all__ = ['DB', 'get_url_data', 'get_update']
+
+# %%% Public
 self_path: str = os.path.dirname(__file__)
+
 config_path: str = os.path.join(self_path, 'config.txt')
 
 _config = ConfigParser()
