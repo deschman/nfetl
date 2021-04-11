@@ -17,4 +17,4 @@ log.txt
 # Build folders
 dist/
 build/
-reportio.egg-info/
+*.egg-info/
