@@ -26,3 +26,5 @@ class _date(date):
             return self.year
         else:
             return self.year - 1
+
+date = _date

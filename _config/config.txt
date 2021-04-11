@@ -3,7 +3,7 @@ start_year = 1970
 keys = offense, kickers, defense, rb_defense, te_defense, qb_defense, wr_defense, coaches, schedule
 
 [Data]
-folder = c:\users\deschman\spyder-env\lib\site-packages\nfetl\_config\data
+folder = C:\Users\deschman\spyder-env\Lib\site-packages\nfetl\data
 test_url_data = %(folder)s\test_url_data.h5
 
 [URLs]
@@ -19,23 +19,25 @@ schedule = https://www.pro-football-reference.com/years/{0}/games.htm
 test = https://www.pro-football-reference.com/years/2019/fantasy.htm
 
 [Columns_extract]
-offense = 'Rk', 'Player', 'Tm', 'FantPos', 'Age', 'G', 'GS', 'P_Cmp', 'P_Att', 'P_Yds', 'P_TD', 'P_Int', 'Ru_Att', 'Ru_Yds', 'Ru_Y/A', 'Ru_TD', 'Re_Tgt', 'Re_Rec', 'Re_Yds', 'Re_Y/R', 'Re_TD', 'Fmb', 'FL', 'TD', '2PM', '2PP', 'FantPt', 'PPR', 'DKPt', 'FDPt', 'VBD', 'PosRank', 'OvRank'
-kickers = 'Rk', 'Player', 'Tm', 'Age', 'Pos', 'G', 'GS', '0-19_FGA', '0-19_FGM', '20-29_FGA', '20-29_FGM', '30-39_FGA', '30-39_FGM', '40-49_FGA', '40-49_FGM', '50+_FGA', '50+_FGM', 'FGA', 'FGM', 'Lng', 'FG%%', 'XPA', 'XPM', 'XP%%', 'KO', 'KOYds', 'TB', 'TB%%', 'KOAvg', 'Pnt', 'Pnt_Yds', 'Pnt_Lng', 'Pnt_Blck', 'Y/P'
-defense = 'Rk', 'Tm', 'G', 'T_PF', 'T_Yds', 'T_Ply', 'T_Y/P', 'T_TO', 'T_FL', 'T_1stD', 'P_Cmp', 'P_Att', 'P_Yds', 'P_TD', 'P_Int', 'P_NY/A', 'P_1stD', 'R_Att', 'R_Yds', 'R_TD', 'R_Y/A', 'R_1stD', 'Pen', 'Pen_Yds', 'Pen_1stD', 'Sc%%', 'TO%%', 'EXP'
-rb_defense = 'Tm', 'G', 'Ru_Att', 'Ru_Yds', 'Ru_TD', 'Re_Tgt', 'Re_Rec', 'Re_Yds', 'Re_TD', 'FantPt', 'DKPt', 'FDPt', 'FantPt/G', 'DKPt/G', 'FDPt/G'
-te_defense = 'Tm', 'G', 'Tgt', 'Rec', 'Yds', 'TD', 'FantPt', 'DKPt', 'FDPt', 'FantPt/G', 'DKPt/G', 'FDPt/G'
-qb_defense = 'Tm', 'G', 'P_Cmp', 'P_Att', 'P_Yds', 'P_TD', 'P_Int', '2PP', 'Sk', 'Ru_Att', 'Ru_Yds', 'Ru_TD', 'FantPt', 'DKPt', 'FDPt', 'FantPt/G', 'DKPt/G', 'FDPt/G'
-wr_defense = 'Tm', 'G', 'Tgt', 'Rec', 'Yds', 'TD', 'FantPt', 'DKPt', 'FDPt', 'FantPt/G', 'DKPt/G', 'FDPt/G'
-coaches = 'Coach', 'Tm', 'G_Y', 'W_Y', 'L_Y', 'T_Y', 'G_T', 'W_T', 'L_T', 'T_T', 'G_C', 'W_C', 'L_C', 'T_C', 'G_Plyf_Y', 'W_Plyf_Y', 'L_Plyf_Y', 'G_Plyf_T', 'W_Plyf_T', 'L_Plyf_T', 'G_Plyf_C', 'W_Plyf_C', 'L_Plyf_C', 'Remark'
-schedule = 'Week', 'Day', 'Date', 'Time', 'Winner/tie', '@', 'Loser/tie', '', 'PtsW', 'PtsL', 'YdsW', 'TOW', 'YdsL', 'TOL'
+offense = Rk, Player, Tm, FantPos, Age, G, GS, P_Cmp, P_Att, P_Yds, P_TD, P_Int, Ru_Att, Ru_Yds, Ru_Y/A, Ru_TD, Re_Tgt, Re_Rec, Re_Yds, Re_Y/R, Re_TD, Fmb, FL, TD, 2PM, 2PP, FantPt, PPR, DKPt, FDPt, VBD, PosRank, OvRank
+kickers = Rk, Player, Tm, Age, Pos, G, GS, 0-19_FGA, 0-19_FGM, 20-29_FGA, 20-29_FGM, 30-39_FGA, 30-39_FGM, 40-49_FGA, 40-49_FGM, 50+_FGA, 50+_FGM, FGA, FGM, Lng, FG%%, XPA, XPM, XP%%, KO, KOYds, TB, TB%%, KOAvg, Pnt, Pnt_Yds, Pnt_Lng, Pnt_Blck, Y/P
+defense = Rk, Tm, G, T_PF, T_Yds, T_Ply, T_Y/P, T_TO, T_FL, T_1stD, P_Cmp, P_Att, P_Yds, P_TD, P_Int, P_NY/A, P_1stD, R_Att, R_Yds, R_TD, R_Y/A, R_1stD, Pen, Pen_Yds, Pen_1stD, Sc%%, TO%%, EXP
+rb_defense = Tm, G, Ru_Att, Ru_Yds, Ru_TD, Re_Tgt, Re_Rec, Re_Yds, Re_TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+te_defense = Tm, G, Tgt, Rec, Yds, TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+qb_defense = Tm, G, P_Cmp, P_Att, P_Yds, P_TD, P_Int, 2PP, Sk, Ru_Att, Ru_Yds, Ru_TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+wr_defense = Tm, G, Tgt, Rec, Yds, TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+coaches = Coach, Tm, G_Y, W_Y, L_Y, T_Y, G_T, W_T, L_T, T_T, G_C, W_C, L_C, T_C, G_Plyf_Y, W_Plyf_Y, L_Plyf_Y, G_Plyf_T, W_Plyf_T, L_Plyf_T, G_Plyf_C, W_Plyf_C, L_Plyf_C, Remark
+schedule = Week, Day, Date, Time, Winner/tie, @, Loser/tie, , PtsW, PtsL, YdsW, TOW, YdsL, TOL
+test = Rk, Player, Tm, FantPos, Age, G, GS, P_Cmp, P_Att, P_Yds, P_TD, P_Int, Ru_Att, Ru_Yds, Ru_Y/A, Ru_TD, Re_Tgt, Re_Rec, Re_Yds, Re_Y/R, Re_TD, Fmb, FL, TD, 2PM, 2PP, FantPt, PPR, DKPt, FDPt, VBD, PosRank, OvRank
 
 [Columns_transform]
-offense =
-kickers =
-defense =
-rb_defense =
-te_defense =
-qb_defense =
-wr_defense =
-coaches =
-schedule =
+offense = 
+kickers = 
+defense = 
+rb_defense = 
+te_defense = 
+qb_defense = 
+wr_defense = 
+coaches = 
+schedule = 
+
