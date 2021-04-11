@@ -95,9 +95,10 @@ class DB(object):
 
     def update(self) -> None:
         """Extract and load all data not currently in database."""
-        data = nfetl.extract.get_all()
+        data = nfetl.extract.get_update()
         data = nfetl.transform.clean(data)
         nfetl.load.add_data(data)
+        nfetl.transform.refresh_db()
 
 
 # %% Script
