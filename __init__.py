@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-A python package for creation and maintenance of an NFL statistics database.
-
-@author: desch
-"""
+"""Python package for creation and maintenance of an NFL statistics database."""
 
 
 # %% Imports
@@ -14,4 +10,9 @@ from nfetl._datetime import _date as date
 
 
 # %% Variables
-__all__ = ['date', 'DB', 'get_url_data', 'get_update']
+__all__ = ['date',
+           'DB',
+           'get_url_data',
+           'get_update',
+           'land_data',
+           'land_all_data']

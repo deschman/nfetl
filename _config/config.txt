@@ -31,13 +31,14 @@ schedule = Week, Day, Date, Time, Winner/tie, @, Loser/tie, , PtsW, PtsL, YdsW, 
 test = Rk, Player, Tm, FantPos, Age, G, GS, P_Cmp, P_Att, P_Yds, P_TD, P_Int, Ru_Att, Ru_Yds, Ru_Y/A, Ru_TD, Re_Tgt, Re_Rec, Re_Yds, Re_Y/R, Re_TD, Fmb, FL, TD, 2PM, 2PP, FantPt, PPR, DKPt, FDPt, VBD, PosRank, OvRank
 
 [Columns_transform]
-offense = 
-kickers = 
-defense = 
-rb_defense = 
-te_defense = 
-qb_defense = 
-wr_defense = 
-coaches = 
-schedule = 
+offense = Rank, Player, Team, Fantasy_Points, Age, Games, Starts, Pass_Completions, Pass_Attempts, Pass_Yards, Pass_TDs, Interceptions, Rush_Attempts, Rush_Yards, Yards_Per_Rush, Rush_TDs, Targets, Receptions, Receive_Yards, Yards_Per_Reception, Receive_TDs, Fumbles, Fumbles_Lost, Total_TDs, Rush_Conversions, Pass_Conversions, Standard_Points, PPR_Points, DraftKings_Points, FanDuel_Points, VBD, Position_Rand, Overall_Rank
+kickers = Rank, Player, Team, Age, Position, Games, Starts, 0-19_Attempts, 0-19_Makes, 20-29_Attempts, 20-29_Makes, 30-39_Attempts, 30-39_Makes, 40-49_Attempts, 40-49_Makes, 50+_Attempts, 50+_Makes, FG_Attempts, FG_Makes, Longest_Make, FG_Percent, XP_Attempts, XP_Makes, XP_Percent, Kickoffs, Kickoff_Yards, Touchbacks, Touchback_Percent, Kickoff_Average, Punts, Punt_Yards, Longest_Punt, Punts_Blocked, Yards_Per_Punt
+defense = Rank, Team, Games, Points_Allowed, Total_Yards, Total_Plays, Total_Yards_Per_Play, Takeaways, Fumbles_Recovered, Total_1st_Downs, Completions, Pass_Attempts, Pass_Yards, Pass_TDs, Interceptions, Yards_Per_Pass_Attempt, Pass_1st_Downs, Rush_Attempts, Rush_Yards, Rush_TDs, Yards_Per_Rush, Rush_1st_Downs, Accepted_Penalties, Penalty_Yards, Penalty_1st_Downs, Score_Percent, Turnover_Percent, Expected_Points
+rb_defense = Team, Games, Rush_Attemptsz, Rush_Yards, Rush_TDs, Targets, Receptions, Receive_Yards, Receive_TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+te_defense = Team, Games, Targets, Receptions, Yards, TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+qb_defense = Team, Games, Completions, Pass_Attempts, Pass_TDs, Interceptions, Pass_Conversions, Sacks, Rush_Attempts, Rush_Yards, Rush_TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+wr_defense = Team, Games, Targets, Receptions, Yards, TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+coaches = Coach, Team, Games_TY, Wins_TY, Losses_TY, Ties_TY, Games_w_Team, Wins_with_Team, Losses_w_Team, Ties_w_Team, Games_in_Career, Wins_in_Career, Losses_in_Career, Ties_in_Career, Playoffs_TY, Playoff_Wins_TY, Playoff_Losses_TY, Playoffs_w_Team, Playoff_Wins_w_Team, Playoff_Losses_w_Team, Playoffs_in_Career, Playoff_Wins_in_Career, Playoff_Losses_in_Career, Remark
+schedule = Week, Day, Date, Time, Winner, Home_Away_Designation, Loser, Winner_Points, Loser_Points, Winner_Yards, Winner_Turnovers, Loser_Yards, Loser_Turnovers
+test = Rank, Player, Team, Fantasy_Points, Age, Games, Starts, Pass_Completions, Pass_Attempts, Pass_Yards, Pass_TDs, Interceptions, Rush_Attempts, Rush_Yards, Yards_Per_Rush, Rush_TDs, Targets, Receptions, Receive_Yards, Yards_Per_Reception, Receive_TDs, Fumbles, Fumbles_Lost, Total_TDs, Rush_Conversions, Pass_Conversions, Standard_Points, PPR_Points, DraftKings_Points, FanDuel_Points, VBD, Position_Rand, Overall_Rank
 

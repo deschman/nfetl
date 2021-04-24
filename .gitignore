@@ -1,6 +1,6 @@
 # pycache files
-__pycache__/
 *.pyc
+__pycache__/
 
 # Spyder project settings
 .spyderproject/
@@ -18,3 +18,6 @@ log.txt
 dist/
 build/
 *.egg-info/
+
+# Test DB
+tests/processes/NFL.db

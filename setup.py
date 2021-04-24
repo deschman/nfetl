@@ -10,11 +10,11 @@ with open("README.md", 'r') as f:
 
 setup(
       name='nfetl',
-      version="0.1.1",
+      version="0.2.0",
       description="A package for creating a database containing NFL stats.",
       long_description=long_description,
       author="Dan Eschman",
-      author_email="deschman007@gmail.com",
+      author_email="dan.eschman@gmail.com",
       license="GNU AGPLv3",
       python_requires='>=3.7',
       install_requires=['pytest', 'bs4', 'pandas', 'dask'],

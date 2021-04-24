@@ -36,7 +36,8 @@ class DB(object):
     # %%% Private
     def __init__(self, db_path: str = _default_db_path) -> None:
         self._db_path = db_path
-        self.__connection = sqlite3.connect(self.db_path)
+        self.__connection = sqlite3.connect(
+            self.db_path, check_same_thread=False)
 
     @property
     def _connection(self) -> sqlite3.Connection:
@@ -95,10 +96,9 @@ class DB(object):
 
     def update(self) -> None:
         """Extract and load all data not currently in database."""
-        data = nfetl.extract.get_update()
-        data = nfetl.transform.clean(data)
-        nfetl.load.add_data(data)
-        nfetl.transform.refresh_db()
+        data = nfetl.get_update()
+        data = nfetl.clean_all(data)
+        nfetl.land_all_data(data)
 
 
 # %% Script

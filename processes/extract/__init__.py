@@ -118,7 +118,8 @@ def get_url_data(url: str, headers: List[str] = []) -> pd.DataFrame:
 
 
 def get_update(start_year: int = _default_start_year,
-               datasets: List[Tuple[str, str, str]] = _default_sets):
+               datasets: List[Tuple[str, str, str]] = _default_sets
+               ) -> Dict[str, pd.DataFrame]:
     """
     Retrieve all data tables from URL list provided by user or in config file.
 
