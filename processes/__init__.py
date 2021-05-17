@@ -3,10 +3,7 @@
 
 
 # %% Imports
-from nfetl.processes.extract import (get_url_data,
-                                     get_update)
-from nfetl.processes.transform import *
-from nfetl.processes.load import (land_data, land_all_data)
+from nfetl.processes import extract, transform, load
 
 # %% Variables
-__all__ = ['get_url_data', 'get_update', 'land_data', 'land_all_data']
+__all__ = ['extract', 'transform', 'load']

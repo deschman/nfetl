@@ -136,7 +136,7 @@ def get_update(start_year: int = _default_start_year,
 
     Returns
     -------
-    dfs : list
+    dfs : Dict[str, pd.DataFrame]
         Contains pandas.DataFrame objects containing data from table found on
         HTML page located at URL.
     """

@@ -10,7 +10,7 @@ with open("README.md", 'r') as f:
 
 setup(
       name='nfetl',
-      version="0.2.0",
+      version="0.3.0",
       description="A package for creating a database containing NFL stats.",
       long_description=long_description,
       author="Dan Eschman",

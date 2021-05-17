@@ -5,8 +5,8 @@ A python package for creation and maintenance of an NFL statistics database.
 ## Long Description
 **nfetl** provides users with a straight-forward API for creating and
 maintaining their own sqlite database of NFL statistics. Statistics are sourced
-from [PRO FOOTBALL REFERENCE](https://www.pro-football-reference.com/) using
-webscraping scripts
+from [Pro-Football-Reference](https://www.pro-football-reference.com/) using
+webscraping scripts.
 
 ## Disclaimer
 During development of this package, consideration was taken to prevent users

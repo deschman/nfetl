@@ -8,9 +8,13 @@ import sys
 import os
 import sqlite3
 from datetime import date
+from typing import Dict
+
+# %%% 3rd Party
+import pandas as pd
 
 # %%% User Defined
-import nfetl
+from nfetl.processes import extract, transform, load
 
 
 # %% Variables
@@ -94,11 +98,17 @@ class DB(object):
         """
         return self._last_update
 
+    def land_all_data(self, dfs: Dict[str, pd.DataFrame]) -> None:
+        __doc__ = load.land_all_data.__doc__
+        load.land_all_data(self, dfs)
+
     def update(self) -> None:
         """Extract and load all data not currently in database."""
-        data = nfetl.get_update()
-        data = nfetl.clean_all(data)
-        nfetl.land_all_data(data)
+        data: Dict[str, pd.DataFrame] = extract.get_update()
+        self.land_all_data(data)
+        # transform.clean_all_data()
+        # transform.define_all_archive()
+        # transform.split_all_update()
 
 
 # %% Script

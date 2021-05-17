@@ -10,12 +10,15 @@ from typing import Dict
 # %%% 3rd Party
 import pandas as pd
 
-# %%% User Defined
-from nfetl.db import DB
-
 
 # %% Variables
 __all__ = ['land_data', 'land_all_data']
+
+
+# %% Classes
+class DB:
+    def __init__(self) -> None:
+        raise NotImplementedError
 
 
 # %% Functions
