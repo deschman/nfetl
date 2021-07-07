@@ -1,0 +1,65 @@
+[DEFAULT]
+start_year = 1970
+folder = C:\Users\deschman\spyder-env\Lib\site-packages\nfetl\nfetl\data
+test_url_data = %(folder)s\test_url_data.h5
+
+[offense]
+url = https://www.pro-football-reference.com/years/{0}/fantasy.htm
+extract_columns = Rk, Player, Tm, FantPos, Age, G, GS, P_Cmp, P_Att, P_Yds, P_TD, P_Int, Ru_Att, Ru_Yds, Ru_Y/A, Ru_TD, Re_Tgt, Re_Rec, Re_Yds, Re_Y/R, Re_TD, Fmb, FL, TD, 2PR, 2PP, FantPt, PPR, DKPt, FDPt, VBD, PosRank, OvRank
+transform_columns = Rank, Player, Team, Fantasy_Points, Age, Games, Starts, Pass_Completions, Pass_Attempts, Pass_Yards, Pass_TDs, Interceptions, Rush_Attempts, Rush_Yards, Yards_Per_Rush, Rush_TDs, Targets, Receptions, Receive_Yards, Yards_Per_Reception, Receive_TDs, Fumbles, Fumbles_Lost, Total_TDs, Rush_Conversions, Pass_Conversions, Standard_Points, PPR_Points, DraftKings_Points, FanDuel_Points, VBD, Position_Rank, Overall_Rank
+nk_columns = Rk
+
+[kicking]
+url = https://www.pro-football-reference.com/years/{0}/kicking.htm
+extract_columns = Rk, Player, Tm, Age, Pos, G, GS, 0-19_FGA, 0-19_FGM, 20-29_FGA, 20-29_FGM, 30-39_FGA, 30-39_FGM, 40-49_FGA, 40-49_FGM, 50+_FGA, 50+_FGM, FGA, FGM, Lng, FG%%, XPA, XPM, XP%%, KO, KOYds, TB, TB%%, KOAvg, Pnt, Pnt_Yds, Pnt_Lng, Pnt_Blck, Y/P
+transform_columns = Rank, Player, Team, Age, Position, Games, Starts, 0-19_Attempts, 0-19_Makes, 20-29_Attempts, 20-29_Makes, 30-39_Attempts, 30-39_Makes, 40-49_Attempts, 40-49_Makes, 50+_Attempts, 50+_Makes, FG_Attempts, FG_Makes, Longest_Make, FG_Percent, XP_Attempts, XP_Makes, XP_Percent, Kickoffs, Kickoff_Yards, Touchbacks, Touchback_Percent, Kickoff_Average, Punts, Punt_Yards, Longest_Punt, Punts_Blocked, Yards_Per_Punt
+nk_columns = Rk
+
+[op_defense]
+url = https://www.pro-football-reference.com/years/{0}/opp.htm
+extract_columns = Rk, Tm, G, T_PF, T_Yds, T_Ply, T_Y/P, T_TO, T_FL, T_1stD, P_Cmp, P_Att, P_Yds, P_TD, P_Int, P_NY/A, P_1stD, R_Att, R_Yds, R_TD, R_Y/A, R_1stD, Pen, Pen_Yds, Pen_1stD, Sc%%, TO%%, EXP
+transform_columns = Rank, Team, Games, Points_Allowed, Total_Yards, Total_Plays, Total_Yards_Per_Play, Takeaways, Fumbles_Recovered, Total_1st_Downs, Completions, Pass_Attempts, Pass_Yards, Pass_TDs, Interceptions, Yards_Per_Pass_Attempt, Pass_1st_Downs, Rush_Attempts, Rush_Yards, Rush_TDs, Yards_Per_Rush, Rush_1st_Downs, Accepted_Penalties, Penalty_Yards, Penalty_1st_Downs, Score_Percent, Turnover_Percent, Expected_Points
+nk_columns = Rk
+
+[rb_defense]
+url = https://www.pro-football-reference.com/years/{0}/fantasy-points-against-RB.htm
+extract_columns = Tm, G, Ru_Att, Ru_Yds, Ru_TD, Re_Tgt, Re_Rec, Re_Yds, Re_TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+transform_columns = Team, Games, Rush_Attempts, Rush_Yards, Rush_TDs, Targets, Receptions, Receive_Yards, Receive_TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+nk_columns = Tm
+
+[te_defense]
+url = https://www.pro-football-reference.com/years/{0}/fantasy-points-against-TE.htm
+extract_columns = Tm, G, Tgt, Rec, Yds, TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+transform_columns = Team, Games, Targets, Receptions, Yards, TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+nk_columns = Tm
+
+[qb_defense]
+url = https://www.pro-football-reference.com/years/{0}/fantasy-points-against-QB.htm
+extract_columns = Tm, G, P_Cmp, P_Att, P_Yds, P_TD, P_Int, 2PP, Sk, Ru_Att, Ru_Yds, Ru_TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+transform_columns = Team, Games, Completions, Pass_Attempts, Pass_Yards, Pass_TDs, Interceptions, Pass_Conversions, Sacks, Rush_Attempts, Rush_Yards, Rush_TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+nk_columns = Tm
+
+[wr_defense]
+url = https://www.pro-football-reference.com/years/{0}/fantasy-points-against-WR.htm
+extract_columns = Tm, G, Tgt, Rec, Yds, TD, FantPt, DKPt, FDPt, FantPt/G, DKPt/G, FDPt/G
+transform_columns = Team, Games, Targets, Receptions, Yards, TDs, Standard_Points, DraftKings_Points, FanDuel_Points, Standard_Points_Per_Game, DraftKings_Points_Per_Game, FanDuel_Points_Per_Game
+nk_columns = Tm
+
+[coaches]
+url = https://www.pro-football-reference.com/years/{0}/coaches.htm
+extract_columns = Coach, Tm, G_Y, W_Y, L_Y, T_Y, G_T, W_T, L_T, T_T, G_C, W_C, L_C, T_C, G_Plyf_Y, W_Plyf_Y, L_Plyf_Y, G_Plyf_T, W_Plyf_T, L_Plyf_T, G_Plyf_C, W_Plyf_C, L_Plyf_C, Remark
+transform_columns = Coach, Team, Games_TY, Wins_TY, Losses_TY, Ties_TY, Games_w_Team, Wins_with_Team, Losses_w_Team, Ties_w_Team, Games_in_Career, Wins_in_Career, Losses_in_Career, Ties_in_Career, Playoffs_TY, Playoff_Wins_TY, Playoff_Losses_TY, Playoffs_w_Team, Playoff_Wins_w_Team, Playoff_Losses_w_Team, Playoffs_in_Career, Playoff_Wins_in_Career, Playoff_Losses_in_Career, Remark
+nk_columns = Coach
+
+[schedule]
+url = https://www.pro-football-reference.com/years/{0}/games.htm
+extract_columns = Week, Day, Date, Time, Winner/tie, @, Loser/tie, boxscore, PtsW, PtsL, YdsW, TOW, YdsL, TOL
+transform_columns = Week, Day, Date, Time, Winner, Home_Away_Designation, Loser, boxscore, Winner_Points, Loser_Points, Winner_Yards, Winner_Turnovers, Loser_Yards, Loser_Turnovers
+nk_columns = Week
+
+[test]
+url = https://www.pro-football-reference.com/years/2019/fantasy.htm
+extract_columns = Rk, Player, Tm, FantPos, Age, G, GS, P_Cmp, P_Att, P_Yds, P_TD, P_Int, Ru_Att, Ru_Yds, Ru_Y/A, Ru_TD, Re_Tgt, Re_Rec, Re_Yds, Re_Y/R, Re_TD, Fmb, FL, TD, 2PR, 2PP, FantPt, PPR, DKPt, FDPt, VBD, PosRank, OvRank
+transform_columns = Rank, Player, Team, Fantasy_Points, Age, Games, Starts, Pass_Completions, Pass_Attempts, Pass_Yards, Pass_TDs, Interceptions, Rush_Attempts, Rush_Yards, Yards_Per_Rush, Rush_TDs, Targets, Receptions, Receive_Yards, Yards_Per_Reception, Receive_TDs, Fumbles, Fumbles_Lost, Total_TDs, Rush_Conversions, Pass_Conversions, Standard_Points, PPR_Points, DraftKings_Points, FanDuel_Points, VBD, Position_Rank, Overall_Rank
+nk_columns = Rk
+

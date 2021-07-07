@@ -1,4 +1,5 @@
 # pycache files
+*.pytest_cache
 *.pyc
 __pycache__/
 

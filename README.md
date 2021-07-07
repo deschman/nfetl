@@ -17,5 +17,10 @@ availability.
 
 ## Example
 ```python
-# TODO: add example
+from nfetl import DB
+import pandas as pd
+
+db: DB = DB()
+
+offense_df: pd.DataFrame = pd.read_sql("SELECT * FROM offense", db.connection)
 ```

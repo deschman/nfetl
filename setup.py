@@ -2,15 +2,16 @@
 """Setup nfetl package."""
 
 
+# %% Imports
 from setuptools import setup, find_packages
 
 
+# %% Script
 with open("README.md", 'r') as f:
     long_description: str = f.read()
 
-setup(
-      name='nfetl',
-      version="0.3.0",
+setup(name='nfetl',
+      version="0.9.0",
       description="A package for creating a database containing NFL stats.",
       long_description=long_description,
       author="Dan Eschman",
@@ -19,10 +20,10 @@ setup(
       python_requires='>=3.7',
       install_requires=['pytest', 'bs4', 'pandas', 'dask'],
       packages=find_packages(),
-      package_data={"test_URLData": ['data/test_URLData.h5']},
+      package_data={"test_url_data": ['data/test_url_data.h5']},
       long_description_content_type='text/markdown',
       classifiers=[
-          'Development Status :: 3 - Alpha',
+          'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
           'Intended Audience :: Science/Research',
           'License :: OSI Approved :: GNU Affero General Public License v3',
