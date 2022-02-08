@@ -11,4 +11,8 @@ from nfetl.db import DB
 
 
 # %% Variables
+# %%% Environment
+os.envion['MODIN_ENGINE'] = 'dask'
+
+# %%% System
 __all__ = ['DB']

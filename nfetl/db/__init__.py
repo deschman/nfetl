@@ -330,7 +330,9 @@ class DB(_DB):
             tuple.
         """
         return _transform.clean_all_data(
-            [(i[1], _config[self._strip_year(i[0])]['nk_columns'], i[0])
+            [(i[1],
+              _config[self._strip_year(i[0])]['nk_columns'].split(', '),
+              i[0])
              for i in dfs.items()])
 
     def load_all_dup_data(self, dfs: Dict[str, pd.DataFrame]) -> None:
